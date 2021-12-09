@@ -11,11 +11,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
-
     window.addEventListener('resize', handleResize);
-
     handleResize();
-
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -34,7 +31,13 @@ const Navbar = () => {
         <Typography.Title level={1} className="logo">
           <Link to="/">Coinium</Link>
         </Typography.Title>
-        <Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}>
+        <Button
+          className="menu-control-container"
+          onClick={() => setActiveMenu(!activeMenu)}
+          size="large"
+          shape="default"
+          style={{ padding: "3px"}}
+          >
           <MenuOutlined />
         </Button>
       </div>
