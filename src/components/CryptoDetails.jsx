@@ -23,7 +23,7 @@ const CryptoDetails = () => {
   if (cryptoDetails === undefined) return <Loader />; //required due to asynchronous nature of JS.
 
 
-  const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
+  const time = ['24h','7d', '30d', '1y', '3m', '3y', '5y'];
 
   const stats = [
     { title: 'Price to USD', value: `$ ${cryptoDetails.price && millify(cryptoDetails.price)}`, icon: <DollarCircleOutlined /> },
@@ -49,7 +49,7 @@ const CryptoDetails = () => {
            {cryptoDetails.name} ({cryptoDetails.slug}) Price
         </Title>
         <p>
-          {cryptoDetails.name} live price in US dollars.
+          {cryptoDetails.name} live price in USD.
           View value statistics, market cap and supply.
         </p>
       </Col>
@@ -62,7 +62,7 @@ const CryptoDetails = () => {
         {time.map((date) => <Option key={date}>{date}</Option>)}
       </Select>
       <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} coinName={cryptoDetails.name}/>
-      <Col classNmae="stats-container">
+      <Col className="stats-container">
         <Col className="coin-value-statistics">
           <Col className="coin-value-statistics-heading">
             <Title level={3} className="coin-details-heading">

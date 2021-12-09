@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
-import { Layout, Typography, Space } from 'antd'; //importing from ant design.
+import { Layout, Typography, Space } from 'antd';
 
 
 import { Navbar, Exchanges, Homepage, Cryptocurrencies, News, CryptoDetails } from './components';
 import './App.css'
 
 const App = () => {
+
+  // useEffect(() => {
+  //   document.title = "Coinium";
+  // }, []);
+
   return (
     <div className="app">
       <div className="navbar">
@@ -35,14 +40,16 @@ const App = () => {
           </div>
         </Layout>
         <div className="footer">
-          <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>
-            Crypto-App <br />
-            All rights reserved
+          <Typography.Title level={5} style={{ color: 'navy', textAlign: 'center' }}>
+            Coinium <br />
+            ALL RIGHTS RESERVED. <br />
+            Coinium is a project completed as part of Project3 at General Assembly's Software Engineering Immersive Program.
           </Typography.Title>
           <Space>
-            <Link to="/">Home</Link>
-            <Link to="/exchanges">Exchanges</Link>
-            <Link to="/news">News</Link>
+            <Link style={{ color: 'navy' }} to="/">Home</Link>
+            <Link style={{ color: 'navy' }} to="/exchanges">Exchanges</Link>
+            <Link style={{ color: 'navy' }} to="/news">News</Link>
+            <a style={{ color: 'navy' }} href="https://www.github.com/dcc7/Project3">Github</a>
           </Space>
         </div>
       </div>
