@@ -41,7 +41,7 @@ const App = () => {
         </Layout>
         <div className="footer">
           <Typography.Title level={5} style={{ color: 'navy', textAlign: 'center' }}>
-            Coinium <br />
+            Coinium. <br />
             ALL RIGHTS RESERVED. <br />
             Coinium is a project completed as part of Project3 at General Assembly's Software Engineering Immersive Program.
           </Typography.Title>
