@@ -21,5 +21,5 @@ Coinium is a web application which displays global cryptocurrency stats. Digital
   - Netlify for front end hosting
 
 ### To be added in future versions:
-  - additional charts displaying the volume of transactions.
-  - bug fixes to the x-axis of charts.
+  - Additional charts displaying the volume of transactions.
+  - Bug fixes to the x-axis of charts.
