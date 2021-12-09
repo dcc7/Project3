@@ -46,9 +46,9 @@ const App = () => {
             Coinium is a project completed as part of Project3 at General Assembly's Software Engineering Immersive Program.
           </Typography.Title>
           <Space>
-            <Link style={{ color: 'navy' }} to="/">Home</Link>
-            <Link style={{ color: 'navy' }} to="/exchanges">Exchanges</Link>
-            <Link style={{ color: 'navy' }} to="/news">News</Link>
+            <Link style={{ color: 'navy' }} to="/">Home</Link>|
+            <Link style={{ color: 'navy' }} to="/exchanges">Exchanges</Link>|
+            <Link style={{ color: 'navy' }} to="/news">News</Link>|
             <a style={{ color: 'navy' }} href="https://www.github.com/dcc7/Project3">Github</a>
           </Space>
         </div>
