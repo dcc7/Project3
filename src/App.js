@@ -8,10 +8,6 @@ import './App.css'
 
 const App = () => {
 
-  // useEffect(() => {
-  //   document.title = "Coinium";
-  // }, []);
-
   return (
     <div className="app">
       <div className="navbar">

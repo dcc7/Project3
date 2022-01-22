@@ -9,9 +9,9 @@ const baseUrl = 'https://coinranking1.p.rapidapi.com';
 const createRequest = (url) => ({ url, headers: cryptoApiHeaders});
 
 export const cryptoApi = createApi({
-  reducerPath: 'cryptoApi',
+  reducerPath: 'cryptoApi', //purpose of the reducer.
   baseQuery: fetchBaseQuery({ baseUrl }),
-  endpoints: (builder) => ({
+  endpoints: (builder) => ({ //end points are defined here.
     getCryptos: builder.query({
       query: (count) => createRequest(`/coins?limit=${count}`)
     }),
@@ -26,6 +26,7 @@ export const cryptoApi = createApi({
     })
   })
 });
+//end points must also be conencted to the store as it is passed down as a prop.
 
-//redux toolkit you can use a hook to get all the data from your query.
+//redux toolkit creates a hook to get all the data from your query instantly (as shown below via the variables).
 export const { useGetCryptosQuery, useGetCryptoDetailsQuery, useGetCryptoHistoryQuery, useGetExchangesQuery } = cryptoApi;

@@ -22,7 +22,7 @@ const Navbar = () => {
     } else {
       setActiveMenu(true)
     }
-    }, [screenSize])
+  }, [screenSize]) //called whenever the screen size changes.
 
   return (
     <div className="nav-container">
@@ -41,7 +41,7 @@ const Navbar = () => {
           <MenuOutlined />
         </Button>
       </div>
-      {activeMenu && (
+      {activeMenu && ( //if activeMenu is true then....
         <Menu className="navigation-section" theme="dark">
           <Menu.Item icon={<HomeOutlined />}>
             <Link to="/">Home</Link>

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-// import React from 'react';
 import millify from 'millify';
 import { Link } from 'react-router-dom';
 import { Card, Row, Col, Input } from 'antd';
 
 import { useGetCryptosQuery } from '../services/cryptoApi';
+import Loader from './Loader';
 
 const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 10 : 100;
@@ -12,7 +12,6 @@ const Cryptocurrencies = ({ simplified }) => {
   const [cryptos, setCryptos] = useState([]);
   const [searchTerm, setSearchTerm] =useState('');
 
-  console.log(cryptosList);
 
   useEffect(() => {
 
@@ -24,7 +23,7 @@ const Cryptocurrencies = ({ simplified }) => {
   //use effect, accepts a callback function and a dependency array. It is a combination of the componentDidMount and componentDidUpdate.
   //if anything changes in the dependency array, the callback function will be executed.
 
-  if (isFetching) return 'Loading...';
+  if (isFetching) return <Loader />;
 
   return (
     <>
