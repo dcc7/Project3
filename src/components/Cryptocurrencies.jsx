@@ -36,7 +36,7 @@ const Cryptocurrencies = ({ simplified }) => {
       <Row gutter={[15, 0]} className="crypto-card-container">
         {cryptos?.map((currency) => (
           <Col xs={24} sm={12} lg={6} className="crypto-card" key={currency.id}>
-            <Link to={`/crypto/${currency.id}`}>
+            {/*<Link to={`/coin/${currency.uuid}`}>*/}
               <Card
                 title={`${currency.rank}. ${currency.name}`}
                 extra={<img className="crypto-image" src={currency.iconUrl} alt="crypto-image"/>}
@@ -46,7 +46,7 @@ const Cryptocurrencies = ({ simplified }) => {
                   <p>Market Cap: ${millify(currency.marketCap)}</p>
                   <p>Daily Change: {millify(currency.change)}%</p>
               </Card>
-            </Link>
+            {/*</Link>*/}
           </Col>
         ))}
       </Row>
@@ -55,6 +55,10 @@ const Cryptocurrencies = ({ simplified }) => {
 }
 
 export default Cryptocurrencies
+
+// <p>Price: ${millify(currency.price)}</p>
+// <p>Market Cap: ${millify(currency.marketCap)}</p>
+// <p>Daily Change: {millify(currency.change)}%</p>
 
 //the use of parenthesis with the map method, means we will return instantly comapred to the use of curly braces.
 //the question mark ensures that when it is undefined it will not map.

@@ -13,7 +13,7 @@ const Exchanges = () => {
   const { data, isFetching } = useGetExchangesQuery();
   const exchangesList = data?.data?.exchanges;
 
-  if (isFetching) return <Loader />;
+  // if (isFetching) return <Loader />;
 
   return (
     <>
@@ -24,7 +24,7 @@ const Exchanges = () => {
         <Col span={6}>Change</Col>
       </Row>
       <Row>
-        {exchangesList.map((exchange) => (
+        {exchangesList?.map((exchange) => (
           <Col span={24}>
             <Collapse>
               <Panel

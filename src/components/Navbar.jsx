@@ -49,9 +49,7 @@ const Navbar = () => {
           <Menu.Item icon={<FundOutlined />}>
             <Link to="/cryptocurrencies">Cryptocurrencies</Link>
           </Menu.Item>
-          <Menu.Item icon={<MoneyCollectOutlined />}>
-            <Link to="/exchanges">Exchanges</Link>
-          </Menu.Item>
+
           <Menu.Item icon={<BulbOutlined />}>
             <Link to="/news">News</Link>
           </Menu.Item>
@@ -62,3 +60,8 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+// Exchanges requires a platinium subscription and hence has been removed.
+// <Menu.Item icon={<MoneyCollectOutlined />}>
+//   <Link to="/exchanges">Exchanges</Link>
+// </Menu.Item>
